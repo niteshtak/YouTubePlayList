@@ -14,6 +14,7 @@
 		A3670EC52151693500D049A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3670EC32151693500D049A8 /* LaunchScreen.storyboard */; };
 		A3670ED02151693500D049A8 /* YouTubePlayListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3670ECF2151693500D049A8 /* YouTubePlayListTests.swift */; };
 		A3670EDB2151693500D049A8 /* YouTubePlayListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3670EDA2151693500D049A8 /* YouTubePlayListUITests.swift */; };
+		ECEE39ECA9E102A4EBCEEFB7 /* Pods_YouTubePlayList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3CF56F87F0CB9EDE2EE047 /* Pods_YouTubePlayList.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		104A75C7E70B858209C75FFA /* Pods-YouTubePlayList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubePlayList.release.xcconfig"; path = "Pods/Target Support Files/Pods-YouTubePlayList/Pods-YouTubePlayList.release.xcconfig"; sourceTree = "<group>"; };
+		2C3CF56F87F0CB9EDE2EE047 /* Pods_YouTubePlayList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouTubePlayList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		870100164552C749C943F11C /* Pods-YouTubePlayList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubePlayList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YouTubePlayList/Pods-YouTubePlayList.debug.xcconfig"; sourceTree = "<group>"; };
 		A3670EB72151693200D049A8 /* YouTubePlayList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTubePlayList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3670EBA2151693200D049A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3670EBC2151693200D049A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECEE39ECA9E102A4EBCEEFB7 /* Pods_YouTubePlayList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F68BD780715B7D5809288DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C3CF56F87F0CB9EDE2EE047 /* Pods_YouTubePlayList.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B90AA9DDFD798EC1CCE5904 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				870100164552C749C943F11C /* Pods-YouTubePlayList.debug.xcconfig */,
+				104A75C7E70B858209C75FFA /* Pods-YouTubePlayList.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A3670EAE2151693200D049A8 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,8 @@
 				A3670ECE2151693500D049A8 /* YouTubePlayListTests */,
 				A3670ED92151693500D049A8 /* YouTubePlayListUITests */,
 				A3670EB82151693200D049A8 /* Products */,
+				5B90AA9DDFD798EC1CCE5904 /* Pods */,
+				3F68BD780715B7D5809288DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3670EDF2151693500D049A8 /* Build configuration list for PBXNativeTarget "YouTubePlayList" */;
 			buildPhases = (
+				D610578169FB19DF26795B6F /* [CP] Check Pods Manifest.lock */,
 				A3670EB32151693200D049A8 /* Sources */,
 				A3670EB42151693200D049A8 /* Frameworks */,
 				A3670EB52151693200D049A8 /* Resources */,
+				05974FF747D851CEEF8AA81C /* [CP] Embed Pods Frameworks */,
+				7C5E79069EB195E972F6620D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05974FF747D851CEEF8AA81C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YouTubePlayList/Pods-YouTubePlayList-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YouTubePlayList/Pods-YouTubePlayList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C5E79069EB195E972F6620D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YouTubePlayList/Pods-YouTubePlayList-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D610578169FB19DF26795B6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YouTubePlayList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A3670EB32151693200D049A8 /* Sources */ = {
@@ -428,15 +513,13 @@
 		};
 		A3670EE02151693500D049A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 870100164552C749C943F11C /* Pods-YouTubePlayList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = YouTubePlayList/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.YouTubePlayList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -446,15 +529,13 @@
 		};
 		A3670EE12151693500D049A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 104A75C7E70B858209C75FFA /* Pods-YouTubePlayList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = YouTubePlayList/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.YouTubePlayList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -470,11 +551,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = YouTubePlayListTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.YouTubePlayListTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -491,11 +568,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = YouTubePlayListTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.YouTubePlayListTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -511,11 +584,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = YouTubePlayListUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.YouTubePlayListUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -531,11 +600,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = YouTubePlayListUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.YouTubePlayListUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
