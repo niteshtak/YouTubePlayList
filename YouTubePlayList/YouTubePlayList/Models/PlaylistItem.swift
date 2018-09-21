@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PlyslistItem {
+struct PlaylistItem {
 	
 	var thumbnailUrl: String! = nil
 	var title: String! = nil
@@ -27,9 +27,9 @@ struct PlyslistItem {
 		
 		guard let dictionary = dictionary else { return nil }
 		
-		let videoId      = dictionary[""] as? String ?? ""
-		let title        = dictionary[""] as? String ?? ""
-		let thumbnailUrl = dictionary[""] as? String ?? ""
+		let videoId      = dictionary[APIKeys.kVideoId] as? String ?? ""
+		let title        = dictionary[APIKeys.kTitle] as? String ?? ""
+		let thumbnailUrl = dictionary[APIKeys.kUrl] as? String ?? ""
 		
 		guard let item = PlaylistItem(thumbnailUrl: thumbnailUrl, title: title, videoId: videoId) else { return nil }
 		

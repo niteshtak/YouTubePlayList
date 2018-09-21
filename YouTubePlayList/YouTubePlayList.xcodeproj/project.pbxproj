@@ -15,6 +15,7 @@
 		A3670EDB2151693500D049A8 /* YouTubePlayListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3670EDA2151693500D049A8 /* YouTubePlayListUITests.swift */; };
 		A3AB43FF2154A2970089D114 /* PlaylistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AB43FE2154A2970089D114 /* PlaylistItem.swift */; };
 		A3AB44012154A52B0089D114 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AB44002154A52B0089D114 /* APIClient.swift */; };
+		A3AB44032154C6E10089D114 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AB44022154C6E10089D114 /* ErrorResponse.swift */; };
 		A3C4655A2152809E00EA3FAE /* PlayListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C465592152809E00EA3FAE /* PlayListVC.swift */; };
 		A3C4655E2152810500EA3FAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C4655D2152810500EA3FAE /* Constants.swift */; };
 		A3C4656021528C2400EA3FAE /* PlayListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C4655F21528C2400EA3FAE /* PlayListCell.swift */; };
@@ -56,6 +57,7 @@
 		A3670EDC2151693500D049A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3AB43FE2154A2970089D114 /* PlaylistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistItem.swift; sourceTree = "<group>"; };
 		A3AB44002154A52B0089D114 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = YouTubePlayList/YTAPIClient/APIClient.swift; sourceTree = SOURCE_ROOT; };
+		A3AB44022154C6E10089D114 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		A3C465592152809E00EA3FAE /* PlayListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListVC.swift; sourceTree = "<group>"; };
 		A3C4655D2152810500EA3FAE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A3C4655F21528C2400EA3FAE /* PlayListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListCell.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				A3AB43FE2154A2970089D114 /* PlaylistItem.swift */,
+				A3AB44022154C6E10089D114 /* ErrorResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				A3AB43FF2154A2970089D114 /* PlaylistItem.swift in Sources */,
 				A3C4656021528C2400EA3FAE /* PlayListCell.swift in Sources */,
 				A3AB44012154A52B0089D114 /* APIClient.swift in Sources */,
+				A3AB44032154C6E10089D114 /* ErrorResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
