@@ -19,6 +19,7 @@ class PlayListVC: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.title = "Work @ 90 Seconds"
 		self.setCollectionViewFlowLayout()
 		self.getPlayListVideos()
     }
@@ -26,16 +27,16 @@ class PlayListVC: UICollectionViewController {
 	func setCollectionViewFlowLayout() {
 		
 		guard let collectionView = self.collectionView else { return }
-		let cellWidth: CGFloat = collectionView.frame.size.width/2.0 - 20
+		let cellWidth: CGFloat = collectionView.frame.size.width/2.0
 		let cellheight: CGFloat = cellWidth / 1.44
 		let cellSize = CGSize(width: cellWidth , height:cellheight)
 		
 		let layout = UICollectionViewFlowLayout()
 		layout.scrollDirection = .vertical
 		layout.itemSize = cellSize
-		layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-		layout.minimumLineSpacing = 10.0
-		layout.minimumInteritemSpacing = 5.0
+		layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+		layout.minimumLineSpacing = 0.0
+		layout.minimumInteritemSpacing = 0.0
 		
 		collectionView.setCollectionViewLayout(layout, animated: true)
 		collectionView.reloadData()
@@ -54,6 +55,8 @@ class PlayListVC: UICollectionViewController {
 			}
 			
 			guard let response = response as? [String: Any] else { return }
+			
+			print(response)
 			
 			guard let items = response["items"] as? [[String: Any]] else { return }
 
@@ -93,14 +96,21 @@ class PlayListVC: UICollectionViewController {
 		}
 	}
 	
+	// MARK: - Navigation
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		
+	}
+	
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+	}
+
     // MARK: UICollectionViewDataSource
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return self.playlistItems.count
     }
 
@@ -109,19 +119,16 @@ class PlayListVC: UICollectionViewController {
 		
 		let item = self.playlistItems[indexPath.row]
 		if let url = item.thumbnailUrl, url.count > 0 {
-			cell.videoThumbnail = 
+			cell.videoThumbnail.af_setImage(withURL: URL(string:url)!)
 		}
 
         return cell
     }
 
     // MARK: UICollectionViewDelegate
-
 	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		print("item selected at: \(indexPath.row)")
-	}
-	
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
+		self.selectedVideoIndex = indexPath.row
+		self.playVideo()
 	}
 }

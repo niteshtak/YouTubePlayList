@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,7 +32,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="182" height="169"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rlv-ww-Mpp">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rlv-ww-Mpp">
                                             <rect key="frame" x="0.0" y="0.0" width="182" height="169"/>
                                         </imageView>
                                     </subviews>
@@ -57,6 +58,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTM-dO-WES" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="967.20000000000005" y="92.203898050974516"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="of0-H9-Esn">
+            <objects>
+                <viewController id="zvq-PM-QsR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vm6-NC-XmT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cL8-Uu-v1P"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dIE-Dn-vlK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824" y="99"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dDz-AL-dOc">

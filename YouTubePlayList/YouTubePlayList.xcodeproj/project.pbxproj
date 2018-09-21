@@ -17,6 +17,7 @@
 		A3AB44162154DAD00089D114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3AB44122154DAD00089D114 /* LaunchScreen.storyboard */; };
 		A3AB44172154DAD00089D114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3AB44142154DAD00089D114 /* Main.storyboard */; };
 		A3AB441A21555C410089D114 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AB441921555C410089D114 /* APIClient.swift */; };
+		A3AB441C215560760089D114 /* VideoPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AB441B215560760089D114 /* VideoPlayerVC.swift */; };
 		A3C4655A2152809E00EA3FAE /* PlayListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C465592152809E00EA3FAE /* PlayListVC.swift */; };
 		A3C4655E2152810500EA3FAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C4655D2152810500EA3FAE /* Constants.swift */; };
 		A3C4656021528C2400EA3FAE /* PlayListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C4655F21528C2400EA3FAE /* PlayListCell.swift */; };
@@ -59,6 +60,7 @@
 		A3AB44132154DAD00089D114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3AB44152154DAD00089D114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3AB441921555C410089D114 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = YouTubePlayList/YTAPIClient/APIClient.swift; sourceTree = SOURCE_ROOT; };
+		A3AB441B215560760089D114 /* VideoPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerVC.swift; sourceTree = "<group>"; };
 		A3C465592152809E00EA3FAE /* PlayListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListVC.swift; sourceTree = "<group>"; };
 		A3C4655D2152810500EA3FAE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A3C4655F21528C2400EA3FAE /* PlayListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListCell.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			children = (
 				A3C465592152809E00EA3FAE /* PlayListVC.swift */,
 				A3C4655F21528C2400EA3FAE /* PlayListCell.swift */,
+				A3AB441B215560760089D114 /* VideoPlayerVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				A3C4655A2152809E00EA3FAE /* PlayListVC.swift in Sources */,
 				A3AB441A21555C410089D114 /* APIClient.swift in Sources */,
 				A3C4655E2152810500EA3FAE /* Constants.swift in Sources */,
+				A3AB441C215560760089D114 /* VideoPlayerVC.swift in Sources */,
 				A3AB43FF2154A2970089D114 /* PlaylistItem.swift in Sources */,
 				A3AB44112154DAA40089D114 /* AppDelegate.swift in Sources */,
 				A3C4656021528C2400EA3FAE /* PlayListCell.swift in Sources */,
