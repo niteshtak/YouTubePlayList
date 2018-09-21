@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A3670EBB2151693200D049A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3670EBA2151693200D049A8 /* AppDelegate.swift */; };
-		A3670EC02151693200D049A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3670EBE2151693200D049A8 /* Main.storyboard */; };
-		A3670EC22151693500D049A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3670EC12151693500D049A8 /* Assets.xcassets */; };
-		A3670EC52151693500D049A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3670EC32151693500D049A8 /* LaunchScreen.storyboard */; };
 		A3670ED02151693500D049A8 /* YouTubePlayListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3670ECF2151693500D049A8 /* YouTubePlayListTests.swift */; };
 		A3670EDB2151693500D049A8 /* YouTubePlayListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3670EDA2151693500D049A8 /* YouTubePlayListUITests.swift */; };
 		A3AB43FF2154A2970089D114 /* PlaylistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AB43FE2154A2970089D114 /* PlaylistItem.swift */; };
-		A3AB44012154A52B0089D114 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AB44002154A52B0089D114 /* APIClient.swift */; };
 		A3AB44032154C6E10089D114 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AB44022154C6E10089D114 /* ErrorResponse.swift */; };
+		A3AB44082154DA230089D114 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AB44072154DA230089D114 /* APIClient.swift */; };
+		A3AB440F2154DAA40089D114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3AB440B2154DAA40089D114 /* Assets.xcassets */; };
+		A3AB44102154DAA40089D114 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3AB440C2154DAA40089D114 /* Info.plist */; };
+		A3AB44112154DAA40089D114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AB440D2154DAA40089D114 /* AppDelegate.swift */; };
+		A3AB44162154DAD00089D114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3AB44122154DAD00089D114 /* LaunchScreen.storyboard */; };
+		A3AB44172154DAD00089D114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3AB44142154DAD00089D114 /* Main.storyboard */; };
 		A3C4655A2152809E00EA3FAE /* PlayListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C465592152809E00EA3FAE /* PlayListVC.swift */; };
 		A3C4655E2152810500EA3FAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C4655D2152810500EA3FAE /* Constants.swift */; };
 		A3C4656021528C2400EA3FAE /* PlayListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C4655F21528C2400EA3FAE /* PlayListCell.swift */; };
@@ -44,11 +45,6 @@
 		2C3CF56F87F0CB9EDE2EE047 /* Pods_YouTubePlayList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouTubePlayList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		870100164552C749C943F11C /* Pods-YouTubePlayList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubePlayList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YouTubePlayList/Pods-YouTubePlayList.debug.xcconfig"; sourceTree = "<group>"; };
 		A3670EB72151693200D049A8 /* YouTubePlayList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTubePlayList.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3670EBA2151693200D049A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A3670EBF2151693200D049A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A3670EC12151693500D049A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A3670EC42151693500D049A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A3670EC62151693500D049A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3670ECB2151693500D049A8 /* YouTubePlayListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YouTubePlayListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3670ECF2151693500D049A8 /* YouTubePlayListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubePlayListTests.swift; sourceTree = "<group>"; };
 		A3670ED12151693500D049A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,8 +52,13 @@
 		A3670EDA2151693500D049A8 /* YouTubePlayListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubePlayListUITests.swift; sourceTree = "<group>"; };
 		A3670EDC2151693500D049A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3AB43FE2154A2970089D114 /* PlaylistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistItem.swift; sourceTree = "<group>"; };
-		A3AB44002154A52B0089D114 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = YouTubePlayList/YTAPIClient/APIClient.swift; sourceTree = SOURCE_ROOT; };
 		A3AB44022154C6E10089D114 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		A3AB44072154DA230089D114 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = YouTubePlayList/YTAPIClient/APIClient.swift; sourceTree = SOURCE_ROOT; };
+		A3AB440B2154DAA40089D114 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A3AB440C2154DAA40089D114 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3AB440D2154DAA40089D114 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A3AB44132154DAD00089D114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A3AB44152154DAD00089D114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3C465592152809E00EA3FAE /* PlayListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListVC.swift; sourceTree = "<group>"; };
 		A3C4655D2152810500EA3FAE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A3C4655F21528C2400EA3FAE /* PlayListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListCell.swift; sourceTree = "<group>"; };
@@ -131,15 +132,11 @@
 		A3670EB92151693200D049A8 /* YouTubePlayList */ = {
 			isa = PBXGroup;
 			children = (
+				A3AB44092154DA690089D114 /* Main */,
+				A3AB44062154DA100089D114 /* YTAPIClient */,
 				A3AB43FD2154A1C90089D114 /* Models */,
-				A3C4656321528E6E00EA3FAE /* YTAPIClient */,
 				A3C4655C215280E200EA3FAE /* Utils */,
 				A3C4655B215280A700EA3FAE /* ViewControllers */,
-				A3670EBA2151693200D049A8 /* AppDelegate.swift */,
-				A3670EBE2151693200D049A8 /* Main.storyboard */,
-				A3670EC12151693500D049A8 /* Assets.xcassets */,
-				A3670EC32151693500D049A8 /* LaunchScreen.storyboard */,
-				A3670EC62151693500D049A8 /* Info.plist */,
 			);
 			path = YouTubePlayList;
 			sourceTree = "<group>";
@@ -171,6 +168,27 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A3AB44062154DA100089D114 /* YTAPIClient */ = {
+			isa = PBXGroup;
+			children = (
+				A3AB44072154DA230089D114 /* APIClient.swift */,
+			);
+			name = YTAPIClient;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A3AB44092154DA690089D114 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A3AB44122154DAD00089D114 /* LaunchScreen.storyboard */,
+				A3AB44142154DAD00089D114 /* Main.storyboard */,
+				A3AB440D2154DAA40089D114 /* AppDelegate.swift */,
+				A3AB440B2154DAA40089D114 /* Assets.xcassets */,
+				A3AB440C2154DAA40089D114 /* Info.plist */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		A3C4655B215280A700EA3FAE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,15 +204,6 @@
 				A3C4655D2152810500EA3FAE /* Constants.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		A3C4656321528E6E00EA3FAE /* YTAPIClient */ = {
-			isa = PBXGroup;
-			children = (
-				A3AB44002154A52B0089D114 /* APIClient.swift */,
-			);
-			name = YTAPIClient;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,9 +313,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3670EC52151693500D049A8 /* LaunchScreen.storyboard in Resources */,
-				A3670EC22151693500D049A8 /* Assets.xcassets in Resources */,
-				A3670EC02151693200D049A8 /* Main.storyboard in Resources */,
+				A3AB44162154DAD00089D114 /* LaunchScreen.storyboard in Resources */,
+				A3AB440F2154DAA40089D114 /* Assets.xcassets in Resources */,
+				A3AB44102154DAA40089D114 /* Info.plist in Resources */,
+				A3AB44172154DAD00089D114 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,11 +400,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3C4655A2152809E00EA3FAE /* PlayListVC.swift in Sources */,
-				A3670EBB2151693200D049A8 /* AppDelegate.swift in Sources */,
+				A3AB44082154DA230089D114 /* APIClient.swift in Sources */,
 				A3C4655E2152810500EA3FAE /* Constants.swift in Sources */,
 				A3AB43FF2154A2970089D114 /* PlaylistItem.swift in Sources */,
+				A3AB44112154DAA40089D114 /* AppDelegate.swift in Sources */,
 				A3C4656021528C2400EA3FAE /* PlayListCell.swift in Sources */,
-				A3AB44012154A52B0089D114 /* APIClient.swift in Sources */,
 				A3AB44032154C6E10089D114 /* ErrorResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,20 +441,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A3670EBE2151693200D049A8 /* Main.storyboard */ = {
+		A3AB44122154DAD00089D114 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A3670EBF2151693200D049A8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A3670EC32151693500D049A8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A3670EC42151693500D049A8 /* Base */,
+				A3AB44132154DAD00089D114 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A3AB44142154DAD00089D114 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3AB44152154DAD00089D114 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -571,7 +581,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
-				INFOPLIST_FILE = YouTubePlayList/Info.plist;
+				INFOPLIST_FILE = YouTubePlayList/Main/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -590,7 +600,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
-				INFOPLIST_FILE = YouTubePlayList/Info.plist;
+				INFOPLIST_FILE = YouTubePlayList/Main/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

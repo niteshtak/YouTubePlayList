@@ -10,9 +10,9 @@ import Foundation
 
 struct PlaylistItem {
 	
-	var thumbnailUrl: String! = nil
-	var title: String! = nil
-	var videoId: String! = nil
+	var thumbnailUrl: String?
+	var title: String?
+	var videoId: String?
 	
 	init() {}
 	

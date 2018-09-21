@@ -9,5 +9,7 @@
 import UIKit
 
 class PlayListCell: UICollectionViewCell {
+	
+	@IBOutlet weak var videoThumbnail: UIImageView!
     
 }

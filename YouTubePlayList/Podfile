@@ -8,5 +8,6 @@ target 'YouTubePlayList' do
   pod 'Alamofire', '4.7'
   pod 'AlamofireImage', '~> 3.3'
   pod 'MBProgressHUD', '~> 1.0.0'
+  pod 'SDWebImage', '~> 4.0'
 
 end
