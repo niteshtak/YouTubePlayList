@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		A3670EBB2151693200D049A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3670EBA2151693200D049A8 /* AppDelegate.swift */; };
-		A3670EBD2151693200D049A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3670EBC2151693200D049A8 /* ViewController.swift */; };
 		A3670EC02151693200D049A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3670EBE2151693200D049A8 /* Main.storyboard */; };
 		A3670EC22151693500D049A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3670EC12151693500D049A8 /* Assets.xcassets */; };
 		A3670EC52151693500D049A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3670EC32151693500D049A8 /* LaunchScreen.storyboard */; };
 		A3670ED02151693500D049A8 /* YouTubePlayListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3670ECF2151693500D049A8 /* YouTubePlayListTests.swift */; };
 		A3670EDB2151693500D049A8 /* YouTubePlayListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3670EDA2151693500D049A8 /* YouTubePlayListUITests.swift */; };
+		A3AB43FF2154A2970089D114 /* PlaylistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AB43FE2154A2970089D114 /* PlaylistItem.swift */; };
+		A3AB44012154A52B0089D114 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AB44002154A52B0089D114 /* APIClient.swift */; };
+		A3C4655A2152809E00EA3FAE /* PlayListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C465592152809E00EA3FAE /* PlayListVC.swift */; };
+		A3C4655E2152810500EA3FAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C4655D2152810500EA3FAE /* Constants.swift */; };
+		A3C4656021528C2400EA3FAE /* PlayListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C4655F21528C2400EA3FAE /* PlayListCell.swift */; };
 		ECEE39ECA9E102A4EBCEEFB7 /* Pods_YouTubePlayList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3CF56F87F0CB9EDE2EE047 /* Pods_YouTubePlayList.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +44,6 @@
 		870100164552C749C943F11C /* Pods-YouTubePlayList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubePlayList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YouTubePlayList/Pods-YouTubePlayList.debug.xcconfig"; sourceTree = "<group>"; };
 		A3670EB72151693200D049A8 /* YouTubePlayList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTubePlayList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3670EBA2151693200D049A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A3670EBC2151693200D049A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A3670EBF2151693200D049A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3670EC12151693500D049A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3670EC42151693500D049A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,11 @@
 		A3670ED62151693500D049A8 /* YouTubePlayListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YouTubePlayListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3670EDA2151693500D049A8 /* YouTubePlayListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubePlayListUITests.swift; sourceTree = "<group>"; };
 		A3670EDC2151693500D049A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3AB43FE2154A2970089D114 /* PlaylistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistItem.swift; sourceTree = "<group>"; };
+		A3AB44002154A52B0089D114 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = YouTubePlayList/YTAPIClient/APIClient.swift; sourceTree = SOURCE_ROOT; };
+		A3C465592152809E00EA3FAE /* PlayListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListVC.swift; sourceTree = "<group>"; };
+		A3C4655D2152810500EA3FAE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A3C4655F21528C2400EA3FAE /* PlayListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +129,11 @@
 		A3670EB92151693200D049A8 /* YouTubePlayList */ = {
 			isa = PBXGroup;
 			children = (
+				A3AB43FD2154A1C90089D114 /* Models */,
+				A3C4656321528E6E00EA3FAE /* YTAPIClient */,
+				A3C4655C215280E200EA3FAE /* Utils */,
+				A3C4655B215280A700EA3FAE /* ViewControllers */,
 				A3670EBA2151693200D049A8 /* AppDelegate.swift */,
-				A3670EBC2151693200D049A8 /* ViewController.swift */,
 				A3670EBE2151693200D049A8 /* Main.storyboard */,
 				A3670EC12151693500D049A8 /* Assets.xcassets */,
 				A3670EC32151693500D049A8 /* LaunchScreen.storyboard */,
@@ -147,6 +158,40 @@
 				A3670EDC2151693500D049A8 /* Info.plist */,
 			);
 			path = YouTubePlayListUITests;
+			sourceTree = "<group>";
+		};
+		A3AB43FD2154A1C90089D114 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A3AB43FE2154A2970089D114 /* PlaylistItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A3C4655B215280A700EA3FAE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A3C465592152809E00EA3FAE /* PlayListVC.swift */,
+				A3C4655F21528C2400EA3FAE /* PlayListCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A3C4655C215280E200EA3FAE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A3C4655D2152810500EA3FAE /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A3C4656321528E6E00EA3FAE /* YTAPIClient */ = {
+			isa = PBXGroup;
+			children = (
+				A3AB44002154A52B0089D114 /* APIClient.swift */,
+			);
+			name = YTAPIClient;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,8 +386,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3670EBD2151693200D049A8 /* ViewController.swift in Sources */,
+				A3C4655A2152809E00EA3FAE /* PlayListVC.swift in Sources */,
 				A3670EBB2151693200D049A8 /* AppDelegate.swift in Sources */,
+				A3C4655E2152810500EA3FAE /* Constants.swift in Sources */,
+				A3AB43FF2154A2970089D114 /* PlaylistItem.swift in Sources */,
+				A3C4656021528C2400EA3FAE /* PlayListCell.swift in Sources */,
+				A3AB44012154A52B0089D114 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,7 +568,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = YouTubePlayList/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.YouTubePlayList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -535,7 +587,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = YouTubePlayList/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.YouTubePlayList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -551,7 +606,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = YouTubePlayListTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.YouTubePlayListTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -568,7 +627,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = YouTubePlayListTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.YouTubePlayListTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -584,7 +647,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = YouTubePlayListUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.YouTubePlayListUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -600,7 +667,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
 				INFOPLIST_FILE = YouTubePlayListUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.YouTubePlayListUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
