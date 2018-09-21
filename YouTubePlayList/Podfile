@@ -9,6 +9,6 @@ target 'YouTubePlayList' do
   pod 'AlamofireImage', '~> 3.3'
   pod 'MBProgressHUD', '~> 1.0.0'
   pod 'SDWebImage', '~> 4.0'
-  pod 'YouTube-Player-iOS-Helper', '~> 0.1'
+  pod 'youtube-ios-player-helper', '~> 0.1.4'
 
 end
