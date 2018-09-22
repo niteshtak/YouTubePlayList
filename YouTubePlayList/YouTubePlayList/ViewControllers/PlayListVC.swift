@@ -15,12 +15,13 @@ import AlamofireImage
 class PlayListVC: UICollectionViewController {
 	
 	var playlistItems = [PlaylistItem]()
-	var selectedVideoIndex: Int?
+	var selectedVideoId: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 		self.title = "Work @ 90 Seconds"
 		self.setCollectionViewFlowLayout()
+		self.setBackButton()
 		self.getPlayListVideos()
     }
 	
@@ -28,7 +29,7 @@ class PlayListVC: UICollectionViewController {
 		
 		guard let collectionView = self.collectionView else { return }
 		let cellWidth: CGFloat = collectionView.frame.size.width/2.0
-		let cellheight: CGFloat = cellWidth / 1.44
+		let cellheight: CGFloat = cellWidth / 1.33
 		let cellSize = CGSize(width: cellWidth , height:cellheight)
 		
 		let layout = UICollectionViewFlowLayout()
@@ -40,6 +41,12 @@ class PlayListVC: UICollectionViewController {
 		
 		collectionView.setCollectionViewLayout(layout, animated: true)
 		collectionView.reloadData()
+	}
+	
+	func setBackButton() {
+		let backItem = UIBarButtonItem()
+		backItem.title = "Back"
+		navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
 	}
 
 	//MARK: API Methods
@@ -72,7 +79,7 @@ class PlayListVC: UICollectionViewController {
 						}
 					}
 					
-					if let id = item["resourceId"] as? [String: Any] {
+					if let id = snippet["resourceId"] as? [String: Any] {
 						playlistItem.videoId = id["videoId"] as? String ?? ""
 					}
 					
@@ -84,21 +91,12 @@ class PlayListVC: UICollectionViewController {
 		}
 	}
 	
-	func playVideo() {
-		guard let selectedIndex = self.selectedVideoIndex else { return }
-		let playlistItem = self.playlistItems[selectedIndex]
-		let videoURL = URL(string:"https://d2vco8nc0skozr.cloudfront.net/homage-mobile-static/20171124/video-quick-guide_low-res.mp4")
-		let player = AVPlayer(url: videoURL!)
-		let playerViewController = AVPlayerViewController()
-		playerViewController.player = player
-		self.present(playerViewController, animated: true) {
-			playerViewController.player!.play()
-		}
-	}
-	
 	// MARK: - Navigation
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		
+		if segue.identifier == "OpenVideoPlayer" {
+			let vc = segue.destination as! VideoPlayerVC
+			vc.videoId = selectedVideoId
+		}
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -121,14 +119,20 @@ class PlayListVC: UICollectionViewController {
 		if let url = item.thumbnailUrl, url.count > 0 {
 			cell.videoThumbnail.af_setImage(withURL: URL(string:url)!)
 		}
-
+		
+		cell.setNeedsLayout()
+		cell.layoutIfNeeded()
         return cell
     }
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		return CGSize(width:(collectionView.frame.height-90)/2, height: 100)
+	}
 
     // MARK: UICollectionViewDelegate
 	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		print("item selected at: \(indexPath.row)")
-		self.selectedVideoIndex = indexPath.row
-		self.playVideo()
+		let playlistItem = self.playlistItems[indexPath.row]
+		self.selectedVideoId = playlistItem.videoId
+		self.performSegue(withIdentifier: "OpenVideoPlayer", sender: self)
 	}
 }

@@ -19,21 +19,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I3R-pO-1cw">
-                            <size key="itemSize" width="182" height="169"/>
+                            <size key="itemSize" width="158" height="149"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlayListCell" id="tp4-GA-elZ" customClass="PlayListCell" customModule="YouTubePlayList" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="182" height="169"/>
+                                <rect key="frame" x="0.0" y="0.0" width="158" height="149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="182" height="169"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="158" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rlv-ww-Mpp">
-                                            <rect key="frame" x="0.0" y="0.0" width="182" height="169"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="158" height="149"/>
                                         </imageView>
                                     </subviews>
                                 </view>
@@ -54,25 +54,51 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="RIt-fW-D4F"/>
+                    <connections>
+                        <segue destination="zvq-PM-QsR" kind="show" identifier="OpenVideoPlayer" id="0lL-ZG-2IK"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTM-dO-WES" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="967.20000000000005" y="92.203898050974516"/>
         </scene>
-        <!--View Controller-->
+        <!--Video PlayerVC-->
         <scene sceneID="of0-H9-Esn">
             <objects>
-                <viewController id="zvq-PM-QsR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoPlayerVC" id="zvq-PM-QsR" customClass="VideoPlayerVC" customModule="YouTubePlayList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vm6-NC-XmT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbd-cy-qA0" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Mgl-55-UEP"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="fdu-ZA-2KG">
+                                <rect key="frame" x="177" y="179" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fdu-ZA-2KG" firstAttribute="centerX" secondItem="cL8-Uu-v1P" secondAttribute="centerX" id="C0q-6Y-gw9"/>
+                            <constraint firstItem="fdu-ZA-2KG" firstAttribute="centerY" secondItem="lbd-cy-qA0" secondAttribute="centerY" id="RgQ-Dt-qMG"/>
+                            <constraint firstItem="lbd-cy-qA0" firstAttribute="leading" secondItem="cL8-Uu-v1P" secondAttribute="leading" id="W7c-G0-eN9"/>
+                            <constraint firstItem="lbd-cy-qA0" firstAttribute="top" secondItem="cL8-Uu-v1P" secondAttribute="top" id="drT-Xf-H4Q"/>
+                            <constraint firstItem="lbd-cy-qA0" firstAttribute="trailing" secondItem="cL8-Uu-v1P" secondAttribute="trailing" id="mYb-7D-pp4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cL8-Uu-v1P"/>
                     </view>
+                    <connections>
+                        <outlet property="playerView" destination="lbd-cy-qA0" id="Hnl-9N-vuu"/>
+                        <outlet property="spinner" destination="fdu-ZA-2KG" id="BGm-v2-JDG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIE-Dn-vlK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1824" y="99"/>
+            <point key="canvasLocation" x="1823" y="92"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dDz-AL-dOc">
