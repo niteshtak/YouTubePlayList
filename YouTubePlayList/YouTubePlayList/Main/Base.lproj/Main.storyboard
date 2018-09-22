@@ -72,13 +72,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbd-cy-qA0" customClass="YTPlayerView">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gE9-V6-RmM">
                                 <rect key="frame" x="0.0" y="64" width="375" height="250"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="Mgl-55-UEP"/>
+                                    <constraint firstAttribute="height" constant="250" id="X2A-FU-grQ"/>
                                 </constraints>
-                            </view>
+                                <connections>
+                                    <outlet property="delegate" destination="zvq-PM-QsR" id="w0D-pS-16E"/>
+                                </connections>
+                            </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="fdu-ZA-2KG">
                                 <rect key="frame" x="177" y="179" width="20" height="20"/>
                             </activityIndicatorView>
@@ -86,21 +89,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fdu-ZA-2KG" firstAttribute="centerX" secondItem="cL8-Uu-v1P" secondAttribute="centerX" id="C0q-6Y-gw9"/>
-                            <constraint firstItem="fdu-ZA-2KG" firstAttribute="centerY" secondItem="lbd-cy-qA0" secondAttribute="centerY" id="RgQ-Dt-qMG"/>
-                            <constraint firstItem="lbd-cy-qA0" firstAttribute="leading" secondItem="cL8-Uu-v1P" secondAttribute="leading" id="W7c-G0-eN9"/>
-                            <constraint firstItem="lbd-cy-qA0" firstAttribute="top" secondItem="cL8-Uu-v1P" secondAttribute="top" id="drT-Xf-H4Q"/>
-                            <constraint firstItem="lbd-cy-qA0" firstAttribute="trailing" secondItem="cL8-Uu-v1P" secondAttribute="trailing" id="mYb-7D-pp4"/>
+                            <constraint firstItem="gE9-V6-RmM" firstAttribute="trailing" secondItem="cL8-Uu-v1P" secondAttribute="trailing" id="JaH-KU-3An"/>
+                            <constraint firstItem="fdu-ZA-2KG" firstAttribute="centerY" secondItem="gE9-V6-RmM" secondAttribute="centerY" id="hpQ-Sh-cQf"/>
+                            <constraint firstItem="gE9-V6-RmM" firstAttribute="top" secondItem="cL8-Uu-v1P" secondAttribute="top" id="mH8-KD-SSE"/>
+                            <constraint firstItem="gE9-V6-RmM" firstAttribute="leading" secondItem="cL8-Uu-v1P" secondAttribute="leading" id="sKj-yu-Xp5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cL8-Uu-v1P"/>
                     </view>
                     <connections>
-                        <outlet property="playerView" destination="lbd-cy-qA0" id="Hnl-9N-vuu"/>
                         <outlet property="spinner" destination="fdu-ZA-2KG" id="BGm-v2-JDG"/>
+                        <outlet property="webView" destination="gE9-V6-RmM" id="04m-17-aJ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIE-Dn-vlK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1823" y="92"/>
+            <point key="canvasLocation" x="1821.5999999999999" y="91.304347826086968"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dDz-AL-dOc">
