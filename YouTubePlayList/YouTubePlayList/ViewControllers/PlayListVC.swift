@@ -8,11 +8,15 @@
 
 import UIKit
 import MBProgressHUD
-import AVFoundation
-import AVKit
 import AlamofireImage
 
-class PlayListVC: UICollectionViewController {
+class PlayListVC: UICollectionViewController, SegueHandlerType {
+	
+	enum SegueIdentifier: String {
+		case OpenVideoPlayer
+	}
+	
+	let reusableIdentifier = "PlayListCell"
 	
 	var playlistItems = [PlaylistItem]()
 	var selectedVideoId: String?
@@ -31,14 +35,14 @@ class PlayListVC: UICollectionViewController {
 		let cellWidth: CGFloat = collectionView.frame.size.width/2.0
 		let cellheight: CGFloat = cellWidth / 1.33
 		let cellSize = CGSize(width: cellWidth , height:cellheight)
-		
+
 		let layout = UICollectionViewFlowLayout()
 		layout.scrollDirection = .vertical
 		layout.itemSize = cellSize
 		layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 		layout.minimumLineSpacing = 0.0
 		layout.minimumInteritemSpacing = 0.0
-		
+
 		collectionView.setCollectionViewLayout(layout, animated: true)
 		collectionView.reloadData()
 	}
@@ -65,22 +69,24 @@ class PlayListVC: UICollectionViewController {
 			
 			print(response)
 			
-			guard let items = response["items"] as? [[String: Any]] else { return }
+			guard let items = response[APIKeys.kItems] as? [[String: Any]] else { return }
 
 			for item in items {
 				var playlistItem = PlaylistItem()
-				if let snippet = item["snippet"] as? [String: Any] {
+				if let snippet = item[APIKeys.kSnippet] as? [String: Any] {
 					
-					playlistItem.title = snippet["title"] as? String ?? ""
+					playlistItem.title = snippet[APIKeys.kTitle] as? String ?? ""
 					
-					if let thumbnails = snippet["thumbnails"] as? [String: Any] {
-						if let images = thumbnails["high"] as? [String: Any] {
-							playlistItem.thumbnailUrl = images["url"] as? String ?? ""
+					if let thumbnails = snippet[APIKeys.kThumbnails] as? [String: Any] {
+						if let images = thumbnails[APIKeys.kResMax] as? [String: Any] {
+							playlistItem.thumbnailUrl = images[APIKeys.kUrl] as? String ?? ""
+						} else if let images = thumbnails[APIKeys.kResStandard] as? [String: Any] {
+							playlistItem.thumbnailUrl = images[APIKeys.kUrl] as? String ?? ""
 						}
 					}
 					
-					if let id = snippet["resourceId"] as? [String: Any] {
-						playlistItem.videoId = id["videoId"] as? String ?? ""
+					if let id = snippet[APIKeys.kResourceId] as? [String: Any] {
+						playlistItem.videoId = id[APIKeys.kVideoId] as? String ?? ""
 					}
 					
 					self.playlistItems.append(playlistItem)
@@ -93,7 +99,7 @@ class PlayListVC: UICollectionViewController {
 	
 	// MARK: - Navigation
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == "OpenVideoPlayer" {
+		if segue.identifier == SegueIdentifier.OpenVideoPlayer.rawValue {
 			let vc = segue.destination as! VideoPlayerVC
 			vc.videoId = selectedVideoId
 		}
@@ -102,18 +108,29 @@ class PlayListVC: UICollectionViewController {
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 	}
+}
 
-    // MARK: UICollectionViewDataSource
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
+//MARK: UICollectionView Data source
+extension PlayListVC {
+	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		let playlistItem = self.playlistItems[indexPath.row]
+		self.selectedVideoId = playlistItem.videoId
+		performSegueWithIdentifier(segueIdentifier: .OpenVideoPlayer, sender: self)
+	}
+}
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.playlistItems.count
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlayListCell", for: indexPath) as! PlayListCell
+//MARK: UICollectionView Delegate
+extension PlayListVC {
+	override func numberOfSections(in collectionView: UICollectionView) -> Int {
+		return 1
+	}
+	
+	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		return self.playlistItems.count
+	}
+	
+	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reusableIdentifier, for: indexPath) as! PlayListCell
 		
 		let item = self.playlistItems[indexPath.row]
 		if let url = item.thumbnailUrl, url.count > 0 {
@@ -122,17 +139,6 @@ class PlayListVC: UICollectionViewController {
 		
 		cell.setNeedsLayout()
 		cell.layoutIfNeeded()
-        return cell
-    }
-	
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width:(collectionView.frame.height-90)/2, height: 100)
-	}
-
-    // MARK: UICollectionViewDelegate
-	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		let playlistItem = self.playlistItems[indexPath.row]
-		self.selectedVideoId = playlistItem.videoId
-		self.performSegue(withIdentifier: "OpenVideoPlayer", sender: self)
+		return cell
 	}
 }

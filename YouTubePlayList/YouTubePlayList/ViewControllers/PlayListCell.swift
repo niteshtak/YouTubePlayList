@@ -11,5 +11,16 @@ import UIKit
 class PlayListCell: UICollectionViewCell {
 	
 	@IBOutlet weak var videoThumbnail: UIImageView!
-    
+	
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		self.contentView.frame = self.bounds
+		self.contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+	}
+	
+	//Lays out subviews.
+	override open func layoutSubviews() {
+		super.layoutSubviews()
+		videoThumbnail.frame = self.bounds
+	}
 }

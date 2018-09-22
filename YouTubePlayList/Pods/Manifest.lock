@@ -3,25 +3,20 @@ PODS:
   - AlamofireImage (3.3.1):
     - Alamofire (~> 4.5)
   - MBProgressHUD (1.0.0)
-  - SDWebImage (4.3.3):
-    - SDWebImage/Core (= 4.3.3)
-  - SDWebImage/Core (4.3.3)
   - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - Alamofire (= 4.7)
   - AlamofireImage (~> 3.3)
   - MBProgressHUD (~> 1.0.0)
-  - SDWebImage (~> 4.0)
   - youtube-ios-player-helper (~> 0.1.4)
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: d87db760deb143966b97a5f87177e2b035b5425e
+PODFILE CHECKSUM: 2dc31f6d41db40df9f0981fe3de3a91426114777
 
 COCOAPODS: 1.4.0
