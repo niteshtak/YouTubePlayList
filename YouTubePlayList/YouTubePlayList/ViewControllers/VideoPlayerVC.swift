@@ -12,7 +12,7 @@ class VideoPlayerVC: UIViewController {
 	
 	var videoId: String?
 	
-	@IBOutlet weak var webView: UIWebView8!
+	@IBOutlet weak var webView: UIWebView!
 	@IBOutlet weak var spinner: UIActivityIndicatorView!
 	
     override func viewDidLoad() {

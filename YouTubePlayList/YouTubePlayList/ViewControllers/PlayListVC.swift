@@ -110,7 +110,7 @@ class PlayListVC: UICollectionViewController, SegueHandlerType {
 	}
 }
 
-//MARK: UICollectionView Data source
+//MARK: UICollectionView Delegates
 extension PlayListVC {
 	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		let playlistItem = self.playlistItems[indexPath.row]
@@ -119,7 +119,7 @@ extension PlayListVC {
 	}
 }
 
-//MARK: UICollectionView Delegate
+//MARK: UICollectionView Data Source
 extension PlayListVC {
 	override func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return 1
