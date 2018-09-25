@@ -11,8 +11,8 @@ import Foundation
 struct Constants {
 	
 	private static let kBaseUrl      = "https://www.googleapis.com/youtube/v3"
-	public static let kAPIKey        = "AIzaSyC9r7YRNBk2spsbzh98g6c21BvVjhbqKC4"
-	public static let kPlayListId    = "PLyRfJw1I1N7HOCVMCJ3xpvKmAfZBv684-"
+	private static let kAPIKey       = "AIzaSyC9r7YRNBk2spsbzh98g6c21BvVjhbqKC4"
+	private static let kPlayListId   = "PLyRfJw1I1N7HOCVMCJ3xpvKmAfZBv684-"
 	
 	public  static let kVideoUrl     = "https://www.youtube.com/embed/"
 	public static let kYTPlayListURL = kBaseUrl+"/playlistItems?part=snippet&playlistId=\(kPlayListId)&key=\(kAPIKey)"
